@@ -1,7 +1,9 @@
 {
-  "name": "chart",
-  "version": "0.1.0",
-  "private": true,
+  "name": "skill-chart",
+  "version": "0.1.4",
+  "private": false,
+  "description": "vuejs chart demo",
+  "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -11,11 +11,20 @@
 </template>
 
 <script>
+
+    import Vue from 'vue' ;
+    import axios from 'axios';
+    import VueAxios from 'vue-axios';
+
+    Vue.use(VueAxios, axios);
+
     import * as am4core from "@amcharts/amcharts4/core";
     import * as am4charts from "@amcharts/amcharts4/charts";
     import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
     am4core.useTheme(am4themes_animated);
+
+
     export default {
         name: 'chart',
         data: () => ({
@@ -66,17 +75,40 @@
                 return this.getData();
             },
             getData(){
-                let url = './data.json';
+                // let url = './data.json';
+                // if (this.select === 'second'){
+                //     url = './data2.json'
+                // }
+                // this.axios.get(url).then(response => {
+                //     console.log(response);
+                //     this.data = response.data;
+                //     this.draw(this.data);
+                // }).catch(error => {
+                //     console.log(error);
+                // });
+                this.data =  [
+                    {"label": "JavaScript", "value": 30},
+                    {"label": "HTML", "value": 35},
+                    {"label": "Flinto", "value": 33},
+                    {"label": "Vue.js", "value": 32},
+                    {"label": "Sketch", "value": 30},
+                    {"label": "Priciple", "value": 30},
+                    {"label": "CSS", "value": 28},
+                    {"label": "Angular", "value": 36}
+                ];
                 if (this.select === 'second'){
-                    url = './data2.json'
+                    this.data = [
+                        {"label": "JavaScript", "value": 20},
+                        {"label": "HTML", "value": 25},
+                        {"label": "Flinto", "value": 23},
+                        {"label": "Vue.js", "value": 22},
+                        {"label": "Sketch", "value": 20},
+                        {"label": "Priciple", "value": 35},
+                        {"label": "CSS", "value": 38},
+                        {"label": "Angular", "value": 26}
+                    ]
                 }
-                this.axios.get(url).then(response => {
-                    console.log(response);
-                    this.data = response.data;
-                    this.draw(this.data);
-                }).catch(error => {
-                    console.log(error);
-                });
+                this.draw(this.data);
             }
         },
         beforeDestroy() {
