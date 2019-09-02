@@ -1,6 +1,6 @@
 {
   "name": "skill-chart",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": false,
   "description": "vuejs chart demo",
   "main": "index.js",
@@ -9,6 +9,21 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "repository": "jdevcomua/Chart",
+  "bugs": {
+    "url": "https://github.com/jdevcomua/Chart"
+  },
+  "homepage": "https://github.com/jdevcomua/Chart#readme",
+  "keywords": [
+    "amchart",
+    "chart",
+    "vue"
+  ],
+  "author": "Jdev",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
@@ -24,29 +39,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {
-      "no-console": "off"
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  "engines": {
+    "node": ">=6.0.0"
+  }
 }
