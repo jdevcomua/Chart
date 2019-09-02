@@ -2,13 +2,11 @@
 
 ## Project setup
 ```
-npm i skill-chart
-npm install vue-axios
-npm install @amcharts/amcharts4
+npm install skill-chart
 ```
 
 ### Install
 ```
-import skillChart from 'skill-chart'
-component: {skillChart}
+import chart from 'skill-chart'
+component: {chart}
 ```
